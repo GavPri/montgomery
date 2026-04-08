@@ -97,7 +97,7 @@ const Feature284 = ({ className }: Feature284Props) => {
               </div>
               <div
                 className={cn(
-                  "w-full flex-1 overflow-hidden rounded-3xl bg-muted",
+                  "relative w-full flex-1 overflow-hidden rounded-3xl bg-muted",
                 )}
               >
                 <Image
