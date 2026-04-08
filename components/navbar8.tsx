@@ -1,5 +1,6 @@
 "use client";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import type { Dispatch, SetStateAction } from "react";
 import { useEffect, useRef, useState } from "react";
 
@@ -53,11 +54,11 @@ const LOGO = {
 const NAVIGATION: MenuItem[] = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
   },
   {
     title: "About",
-    url: "#",
+    url: "/about",
   },
   {
     title: "Portfolio",
@@ -104,15 +105,15 @@ const NAVIGATION: MenuItem[] = [
   },
   {
     title: "Testimonials",
-    url: "#",
+    url: "/testimonials",
   },
   {
     title: "FAQs",
-    url: "#",
+    url: "/faqs",
   },
   {
     title: "Contact",
-    url: "#",
+    url: "/contact",
   },
 ];
 
@@ -121,11 +122,11 @@ const MOBILE_NAVIGATION: MenuItem[] = [
     title: "Navigation",
     className: "col-span-2",
     links: [
-      { label: "Home", url: "#" },
-      { label: "About", url: "#" },
-      { label: "Testimonials", url: "#" },
-      { label: "FAQs", url: "#" },
-      { label: "Contact", url: "#" },
+      { label: "Home", url: "/" },
+      { label: "About", url: "/about" },
+      { label: "Testimonials", url: "/testimonials" },
+      { label: "FAQs", url: "/faqs" },
+      { label: "Contact", url: "/contact" },
     ],
   },
   {
@@ -277,6 +278,8 @@ const Navbar8 = ({ className }: Navbar8Props) => {
 
 const DesktopMenuItem = ({ item, index }: DesktopMenuItemProps) => {
   const imagesRef = useRef<HTMLImageElement[]>([]);
+  const pathname = usePathname();
+  const isActive = item.url ? pathname === item.url : false;
 
   const handleMouseEnter = (event: React.MouseEvent<HTMLElement>) => {
     const index = Number(event.currentTarget.getAttribute("data-index"));
@@ -356,7 +359,12 @@ const DesktopMenuItem = ({ item, index }: DesktopMenuItemProps) => {
       value={`${index}`}
       className={`${navigationMenuTriggerStyle()} bg-transparent`}
     >
-      <NavigationMenuLink href={item.url}>{item.title}</NavigationMenuLink>
+      <NavigationMenuLink
+        href={item.url}
+        className={isActive ? "text-primary font-semibold" : ""}
+      >
+        {item.title}
+      </NavigationMenuLink>
     </NavigationMenuItem>
   );
 };
@@ -416,6 +424,29 @@ const MobileNavigationMenu = ({ open, setOpen }: MobileNavigationMenuProps) => {
   );
 };
 
+const MobileNavLink = ({
+  link,
+  index,
+}: {
+  link: { label: string; url: string };
+  index: number;
+}) => {
+  const pathname = usePathname();
+  const isActive = pathname === link.url;
+  return (
+    <a
+      href={link.url}
+      className={cn(
+        index === 0 ? "text-2xl" : "text-base",
+        "leading-normal font-medium",
+        isActive ? "text-secondary" : "text-primary-foreground",
+      )}
+    >
+      {link.label}
+    </a>
+  );
+};
+
 const renderMobileMenuItem = (item: MenuItem, index: number) => {
   return (
     <div
@@ -426,12 +457,7 @@ const renderMobileMenuItem = (item: MenuItem, index: number) => {
       <ul className="flex flex-col gap-3">
         {item.links?.map((link, i) => (
           <li key={`mobile-nav-link-${i}`}>
-            <a
-              href={link.url}
-              className={`text-primary-foreground ${index === 0 ? "text-2xl" : "text-base"} leading-normal font-medium`}
-            >
-              {link.label}
-            </a>
+            <MobileNavLink link={link} index={index} />
           </li>
         ))}
       </ul>

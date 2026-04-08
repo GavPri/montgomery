@@ -49,7 +49,7 @@ const Testimonial3 = ({ className }: Testimonial3Props) => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex flex-col items-start px-4 lg:items-center gap-4 border-border border-1 rounded-md py-10 text-center"
+            className="flex flex-col items-start px-4 lg:items-center gap-4 border-border border-1 rounded-md py-10 text-center bg-card"
           >
             <q className="block max-w-5xl text-xl font-medium lg:text-2xl italic text-left">
               {testimonial.quote}

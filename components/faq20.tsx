@@ -90,14 +90,14 @@ const Faq20 = ({
   className,
 }: Faq20Props) => {
   return (
-    <section className={cn("py-28 lg:py-32", className)}>
-      <div className="container max-w-5xl">
+    <section className={cn("py-8 rounded-md lg:py-32 bg-card w-10/12 mt-6 px-4", className)}>
+      <div className="container max-w-6xl">
         <div className="mx-auto grid gap-16 lg:grid-cols-2">
-          <div className="space-y-4">
+          <div className="space-y-4 sm:text-center lg:text-left">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-6xl text-foregound">
               <span className="italic text-primary">G</span>{heading.slice(1)}
             </h2>
-            <p className="max-w-md leading-snug text-muted-foreground lg:mx-auto">
+            <p className="max-w-md leading-snug text-muted-foreground sm:mx-auto lg:mx-0">
               {description}{" "}
               <a
                 href={contactLinkHref}
@@ -109,7 +109,7 @@ const Faq20 = ({
             </p>
           </div>
 
-          <div className="grid gap-6 text-start">
+          <div className="grid gap-6 text-start ">
             {categories.map((category, categoryIndex) => (
               <div key={category.title}>
                 <h3 className="border-b py-4 text-muted-foreground text-2xl text-primary">

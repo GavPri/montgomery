@@ -5,11 +5,17 @@ import { cn } from "@/lib/utils";
 const profile = {
   title: "Stuart Montgomery",
   subtitle: "Commercial Artist, Co. Meath",
-  bio: "Stuart Montgomery is a commercial artist based in Dunboyne, Co. Meath, with over 20 years experience producing hand-painted murals, decorative finishes and bespoke artwork for homes, businesses, creches, restaurants and public spaces across Ireland and beyond.",
+  bio: "Stuart Montgomery is a commercial artist based in County Meath with a career spanning three decades, two continents and everything from West End theatre sets to children's bedroom walls. Whether you're a homeowner with an idea or a business looking for something that makes people stop and stare, Stuart brings the same care, craft and conversation to every project.",
+  background: [
+    "Born in Essex in 1972, Stuart studied Three Dimensional Design at Thurrock Technical College before going on to Manchester Metropolitan University, where he graduated in 1995 with a degree majoring in wood, metal, ceramics and glass.",
+    "He moved to London after graduating and spent several years working as a prop maker for art houses, producing props and scenic backdrops for TV commercials, pop videos and West End theatre productions. It was during this period that he worked on the final series of Spitting Image, taught himself sign-writing and began producing large-scale murals for restaurants, hotels and nightclubs.",
+    "Stuart moved to Ireland in 1998 and quickly built a reputation for large-scale hand-painted murals across the country — country houses, pubs, restaurants, creches and a growing domestic clientele. He has since travelled to America to produce decorative paint finishes for a chain of Irish pubs, and has completed projects in Portugal, London and Manchester.",
+    "His move to Ireland also opened doors in the screen and stage industry. Stuart has built props and scene-painted for RTÉ and numerous independent production companies, with work appearing on shows as varied as Podge and Rodge, The Dunphy Show and Jason Byrne's Out of the Box.",
+  ],
   vision:
     "Every project begins with a conversation. Stuart visits your space, listens to your ideas and works up a concept sketch before any paint is applied — so you know exactly what you're getting. No spraying, no shortcuts. Every piece is hand-painted to the highest standard with minimal disruption to your home or business.",
   outro:
-    "Based in Co. Meath and working nationwide — Stuart has painted everything from children's bedrooms in Leinster to Irish pubs in America.",
+    "Stuart is based in County Meath and continues to work throughout Ireland and abroad, producing murals and artwork for loyal clients and new customers alike. You can reach him by email at info@stuartmontgomery.com or by phone on +353 87 2900736. For information on commissioning a mural or painting, see the FAQs page.",
   team: [
     { id: "01", item: "Commercial", type: "Offices, restaurants & retail", href: "#" },
     { id: "02", item: "Residential", type: "Homes & living spaces", href: "#" },
@@ -84,6 +90,15 @@ const About10 = ({ className }: About10Props) => {
                   {profile.bio}
                 </p>
 
+                <div className="space-y-6">
+                  <h2 className="text-2xl font-medium">Background</h2>
+                  {profile.background.map((paragraph, i) => (
+                    <p key={i} className="leading-relaxed text-muted-foreground">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
                   <h2 className="text-2xl font-medium">How I Work</h2>
                   <p className="leading-relaxed">{profile.vision}</p>
@@ -123,8 +138,37 @@ const About10 = ({ className }: About10Props) => {
                   </div>
                 </div>
 
-                <div className="mt-16">
-                  <p className="leading-relaxed">{profile.outro}</p>
+                <div className="mt-16 space-y-2">
+                  <p className="leading-relaxed">
+                    Stuart is based in County Meath and continues to work
+                    throughout Ireland and abroad, producing murals and artwork
+                    for loyal clients and new customers alike.
+                  </p>
+                  <p className="leading-relaxed">
+                    Contact Stuart by email at{" "}
+                    <a
+                      href="mailto:info@stuartmontgomery.com"
+                      className="text-primary hover:underline"
+                    >
+                      info@stuartmontgomery.com
+                    </a>{" "}
+                    or by phone on{" "}
+                    <a
+                      href="tel:+353872900736"
+                      className="text-primary hover:underline"
+                    >
+                      +353 87 2900736
+                    </a>
+                    .
+                  </p>
+                  <p className="leading-relaxed">
+                    For information on commissioning a mural or painting, see
+                    the{" "}
+                    <a href="/faqs" className="text-primary hover:underline">
+                      FAQs page
+                    </a>
+                    .
+                  </p>
                 </div>
               </div>
             </div>
