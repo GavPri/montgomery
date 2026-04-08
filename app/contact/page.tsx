@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import { Contact18 } from "@/components/contact18";
-import { Faq20 } from "@/components/faq20";
 
+export const metadata: Metadata = {
+  title: "Contact — Get a Free Quote",
+  description:
+    "Get in touch with Stuart Montgomery for a free, no-obligation consultation. Based in Co. Meath, working across Ireland. Call, email or fill in the form.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Stuart Montgomery — Get a Free Quote",
+    description:
+      "Contact Stuart for a free consultation. He'll visit your space, discuss your ideas and provide a no-obligation quote.",
+    url: "https://stuartmontgomery.com/contact",
+  },
+};
 
 export default function Home() {
   return (

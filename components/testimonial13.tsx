@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -14,7 +16,15 @@ const Testimonial13 = ({ className }: Testimonial13Props) => {
         <div className="flex flex-col items-start text-left">
           <div className="mb-8 flex items-center rounded-full bg-secondary p-1 shadow-md">
             <Avatar className="size-10">
-              <AvatarImage src="/images/testimonials/giraffe-childcare.png" />
+              <AvatarImage asChild>
+                <Image
+                  src="/images/testimonials/giraffe-childcare.png"
+                  alt="Giraffe Childcare"
+                  width={40}
+                  height={40}
+                  loading="lazy"
+                />
+              </AvatarImage>
               <AvatarFallback>GC</AvatarFallback>
             </Avatar>
             <div className="mx-2 text-xs font-medium">

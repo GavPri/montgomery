@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -40,13 +41,16 @@ const About10 = ({ className }: About10Props) => {
             <div className="sticky top-20 md:p-6">
               <div className="mb-8">
                 <div className="mb-6 flex items-center gap-4">
-                  <img
+                  <Image
                     src="/images/stuart-about.jpg"
-                    alt="Stuart Montgomery"
+                    alt="Stuart Montgomery, mural artist based in County Meath"
                     className="h-16 w-16 rounded-lg object-cover"
+                    width={64}
+                    height={64}
+                    priority
                   />
                   <div>
-                    <h3 className="font-semibold">{profile.title}</h3>
+                    <p className="font-semibold">{profile.title}</p>
                     <p className="text-sm text-muted-foreground">
                       {profile.subtitle}
                     </p>
@@ -54,7 +58,7 @@ const About10 = ({ className }: About10Props) => {
                 </div>
               </div>
 
-              <nav>
+              <nav aria-label="About page navigation">
                 <div className="py-4">
                   <a
                     href="/contact"
@@ -105,37 +109,42 @@ const About10 = ({ className }: About10Props) => {
                 </div>
 
                 <div className="my-12">
-                  <img
+                  <Image
                     src="/images/stuart-about.jpg"
-                    alt="Stuart Montgomery infront of princess wall art."
+                    alt="Stuart Montgomery standing in front of a hand-painted princess mural"
                     className="rounded-2xl object-cover"
+                    width={800}
+                    height={600}
+                    loading="lazy"
                   />
                 </div>
 
                 <div>
                   <h2 className="mb-8 text-2xl font-medium">Explore My Work</h2>
-                  <div className="space-y-6">
+                  <ul className="space-y-6">
                     {profile.team.map(({ id, item, type, href }) => (
-                      <a
-                        key={id}
-                        href={href}
-                        className="group flex items-center justify-between border-b py-4 hover:border-primary transition-colors"
-                      >
-                        <div className="flex items-center gap-4">
-                          <span className="font-mono text-sm text-muted-foreground">
-                            {id}
-                          </span>
-                          <span className="text-base group-hover:text-primary transition-colors">{item}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm text-muted-foreground">
-                            {type}
-                          </span>
-                          <ArrowUpRight className="size-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </div>
-                      </a>
+                      <li key={id}>
+                        <a
+                          href={href}
+                          className="group flex items-center justify-between border-b py-4 hover:border-primary transition-colors"
+                          aria-label={`View ${item} portfolio — ${type}`}
+                        >
+                          <div className="flex items-center gap-4">
+                            <span className="font-mono text-sm text-muted-foreground">
+                              {id}
+                            </span>
+                            <span className="text-base group-hover:text-primary transition-colors">{item}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm text-muted-foreground">
+                              {type}
+                            </span>
+                            <ArrowUpRight className="size-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                        </a>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
 
                 <div className="mt-16 space-y-2">

@@ -1,7 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -75,17 +73,18 @@ const Services12 = ({ className }: Services12Props) => {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2">
           {/* Featured Services - First 2 */}
           {services.slice(0, 2).map((service, idx) => (
-            <motion.a
+            <a
               key={idx}
               href={service.url}
-              whileHover={{ opacity: 0.8 }}
-              className="group block overflow-hidden rounded-xl"
+              className="group block overflow-hidden rounded-xl transition-opacity hover:opacity-80"
             >
               <Card className="relative aspect-[3/4] overflow-hidden p-0">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  fill
+                  className="object-cover"
+                  loading="lazy"
                 />
                 <CardContent className="absolute inset-0 flex flex-col justify-start p-6">
                   <div className="pr-4 font-semibold text-white">
@@ -94,23 +93,24 @@ const Services12 = ({ className }: Services12Props) => {
                 </CardContent>
                 <ArrowUpRight className="absolute top-6 right-6 h-6 w-6 text-white transition-transform group-hover:scale-110" />
               </Card>
-            </motion.a>
+            </a>
           ))}
 
           {/* Secondary Services - Remaining 3 */}
           <div className="col-span-full grid grid-cols-1 gap-4 sm:grid-cols-3">
             {services.slice(2).map((service, idx) => (
-              <motion.a
+              <a
                 key={idx + 2}
                 href={service.url}
-                whileHover={{ opacity: 0.8 }}
-                className="group block overflow-hidden rounded-xl"
+                className="group block overflow-hidden rounded-xl transition-opacity hover:opacity-80"
               >
                 <Card className="relative aspect-[4/3] overflow-hidden p-0">
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    fill
+                    className="object-cover"
+                    loading="lazy"
                   />
                   <CardContent className="absolute inset-0 flex flex-col justify-start p-4">
                     <div className="pr-4 text-sm font-semibold text-white">
@@ -119,7 +119,7 @@ const Services12 = ({ className }: Services12Props) => {
                   </CardContent>
                   <ArrowUpRight className="absolute top-4 right-4 h-5 w-5 text-white transition-transform group-hover:scale-110" />
                 </Card>
-              </motion.a>
+              </a>
             ))}
           </div>
         </div>

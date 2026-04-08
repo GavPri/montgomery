@@ -1,5 +1,5 @@
-"use client";
 import { Check, Star } from "lucide-react";
+import Image from "next/image";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -59,10 +59,12 @@ const Hero172 = ({ className }: Hero172Props) => {
                   ratio={0.857142857 / 1}
                   className="overflow-hidden"
                 >
-                  <img
+                  <Image
                     src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
                     alt=""
-                    className="block size-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
                   />
                 </AspectRatio>
               </div>
@@ -72,10 +74,12 @@ const Hero172 = ({ className }: Hero172Props) => {
                   ratio={0.789473684 / 1}
                   className="overflow-hidden"
                 >
-                  <img
+                  <Image
                     src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg"
                     alt=""
-                    className="block size-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
                   />
                 </AspectRatio>
               </div>
@@ -85,10 +89,12 @@ const Hero172 = ({ className }: Hero172Props) => {
                   ratio={0.894495413 / 1}
                   className="overflow-hidden"
                 >
-                  <img
+                  <Image
                     src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-3.svg"
                     alt=""
-                    className="block size-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
                   />
                 </AspectRatio>
               </div>

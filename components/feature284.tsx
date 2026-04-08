@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -99,10 +100,12 @@ const Feature284 = ({ className }: Feature284Props) => {
                   "w-full flex-1 overflow-hidden rounded-3xl bg-muted",
                 )}
               >
-                <img
+                <Image
                   src={feature.img}
                   alt={feature.title}
-                  className="pointer-events-none h-full w-full object-cover"
+                  fill
+                  className="pointer-events-none object-cover"
+                  loading="lazy"
                 />
               </div>
               <h3 className="mt-2 text-xl font-semibold tracking-tight text-card">

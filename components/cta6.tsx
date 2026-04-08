@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -24,10 +26,12 @@ const Cta6 = ({ className }: Cta6Props) => {
           </div>
           <div className="absolute right-1/2 bottom-0 mr-6 h-min w-[110%] max-w-md translate-x-1/2 md:-right-36 md:mr-0 md:w-3/4 md:max-w-xl md:translate-x-0 lg:mt-auto xl:relative xl:right-0 xl:h-full xl:w-full xl:max-w-full">
             <div className="relative aspect-8/5 h-full min-h-[16rem] w-full overflow-clip rounded-3xl">
-              <img
+              <Image
                 src="/images/cta-feature.jpg"
                 alt="Hand-painted mural by Stuart Montgomery"
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
+                loading="lazy"
               />
             </div>
           </div>
