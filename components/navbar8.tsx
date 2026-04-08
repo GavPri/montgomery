@@ -52,70 +52,63 @@ const LOGO = {
 
 const NAVIGATION: MenuItem[] = [
   {
-    title: "Products",
+    title: "Home",
+    url: "#",
+  },
+  {
+    title: "About",
+    url: "#",
+  },
+  {
+    title: "Portfolio",
     links: [
       {
-        label: "Company Blog",
-        description: "Explore the latest insights and updates",
+        label: "Commercial",
         url: "#",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
       },
       {
-        label: "Our Platform",
-        description: "Innovative tools to empower your workflow",
+        label: "Residential",
         url: "#",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg",
       },
       {
-        label: "Careers at Our Company",
-        description: "Discover open roles and our workplace culture",
+        label: "Boys Room",
         url: "#",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg",
       },
       {
-        label: "Customer Support",
-        description: "Reach out or browse community help articles",
+        label: "Girls Room",
         url: "#",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-4.svg",
       },
       {
-        label: "Product Documentation",
-        description: "In-depth guides, references, and API docs",
+        label: "Creche",
         url: "#",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-5.svg",
       },
+      {
+        label: "Play Area",
+        url: "#",
+      },
+      {
+        label: "Hand Painted Furniture",
+        url: "#",
+      },
     ],
   },
   {
-    title: "Company",
-    links: [
-      {
-        label: "About Our Team",
-        url: "#",
-        description: "Learn more about our mission and values",
-        image:
-          "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
-      },
-      {
-        label: "Help & Support Center",
-        url: "#",
-        description: "Search our help center for quick answers",
-        image:
-          "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg",
-      },
-      {
-        label: "Latest News",
-        url: "#",
-        description: "Stay up to date with product announcements",
-        image:
-          "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg",
-      },
-    ],
+    title: "Testimonials",
+    url: "#",
+  },
+  {
+    title: "FAQs",
+    url: "#",
   },
   {
     title: "Contact",
@@ -125,69 +118,27 @@ const NAVIGATION: MenuItem[] = [
 
 const MOBILE_NAVIGATION: MenuItem[] = [
   {
-    title: "Products",
+    title: "Navigation",
     className: "col-span-2",
     links: [
-      {
-        label: "Company Blog",
-        url: "#",
-      },
-      {
-        label: "Our Platform",
-        url: "#",
-      },
-      {
-        label: "Careers at Our Company",
-        url: "#",
-      },
-      {
-        label: "Customer Support",
-        url: "#",
-      },
-      {
-        label: "Product Documentation",
-        url: "#",
-      },
+      { label: "Home", url: "#" },
+      { label: "About", url: "#" },
+      { label: "Testimonials", url: "#" },
+      { label: "FAQs", url: "#" },
+      { label: "Contact", url: "#" },
     ],
   },
   {
-    title: "Company",
-    className: "",
+    title: "Portfolio",
+    className: "col-span-2",
     links: [
-      {
-        label: "About Our Team",
-        url: "#",
-      },
-      {
-        label: "Help & Support Center",
-        url: "#",
-      },
-      {
-        label: "Latest News",
-        url: "#",
-      },
-    ],
-  },
-  {
-    title: "Community",
-    className: "",
-    links: [
-      {
-        label: "Forum",
-        url: "#",
-      },
-      {
-        label: "Slack Group",
-        url: "#",
-      },
-      {
-        label: "Contributors",
-        url: "#",
-      },
-      {
-        label: "Meetups",
-        url: "#",
-      },
+      { label: "Commercial", url: "#" },
+      { label: "Residential", url: "#" },
+      { label: "Boys Room", url: "#" },
+      { label: "Girls Room", url: "#" },
+      { label: "Creche", url: "#" },
+      { label: "Play Area", url: "#" },
+      { label: "Hand Painted Furniture", url: "#" },
     ],
   },
 ];
@@ -204,13 +155,8 @@ const NAV_BUTTONS: {
     | "secondary";
 }[] = [
   {
-    label: "Log in",
-    url: "#",
-    variant: "ghost",
-  },
-  {
-    label: "Sign up",
-    url: "#",
+    label: "Call Me",
+    url: "tel:0834802446",
     variant: "default",
   },
 ];
@@ -248,10 +194,10 @@ const Navbar8 = ({ className }: Navbar8Props) => {
     };
 
     const handleScroll = () => {
-      navRef.current?.classList.toggle("bg-background", window.scrollY > 300);
+      navRef.current?.classList.toggle("bg-background", window.scrollY > 50);
       navRef.current?.classList.toggle(
         "bg-transparent",
-        !(window.scrollY > 300),
+        !(window.scrollY > 50),
       );
     };
 
@@ -278,10 +224,10 @@ const Navbar8 = ({ className }: Navbar8Props) => {
   return (
     <section className={cn("", className)}>
       <div
-        className="fixed top-0 z-500 w-full bg-transparent transition-colors duration-500"
+        className="fixed top-0 z-500 w-full bg-transparent transition-colors duration-200 px-6"
         ref={navRef}
       >
-        <div className="container border-b">
+        <div className="container mx-auto border-b">
           <div className="flex items-center justify-between gap-3.5 py-5">
             <a
               href={LOGO.url}
