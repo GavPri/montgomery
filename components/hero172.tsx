@@ -18,8 +18,8 @@ const Hero172 = ({ className }: Hero172Props) => {
         <div className="grid grid-cols-1 items-stretch justify-center gap-20 lg:grid-cols-2">
           <div className="flex items-center">
             <div className="flex max-w-[40.625rem] flex-col gap-8 lg:pl-12">
-              <h1 className="font-serif text-4xl text-foreground lg:text-5xl xl:text-6xl">
-                <span className="italic text-primary">Transform</span> your space with hand-painted art
+              <h1 className="font-serif text-4xl text-foreground font-bold lg:text-6xl">
+                <span className="italic text-primary text-7xl">T</span>ransform your space with hand-painted art
               </h1>
               <p className="text-lg text-balance text-muted-foreground">
                 From statement murals to beautifully painted furniture, Stuart

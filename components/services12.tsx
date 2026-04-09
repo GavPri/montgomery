@@ -54,8 +54,8 @@ const Services12 = ({ className }: Services12Props) => {
       <div className="grid grid-cols-1 gap-10 px-6 lg:grid-cols-3">
         <div className="flex flex-col justify-between lg:col-span-1">
           <div>
-            <h2 className="mb-4 text-4xl font-medium text-foreground md:text-6xl">
-              <span className="italic text-primary text-7xl">P</span>ortfolio
+            <h2 className="mb-4 text-4xl font-bold text-foreground md:text-6xl">
+              <span className="italic text-primary text-7xl font-bold">P</span>ortfolio
             </h2>
             <p className="w-72 text-base tracking-tight text-muted-foreground">
               From hand-painted murals to beautifully crafted furniture, explore

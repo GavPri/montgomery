@@ -80,7 +80,7 @@ const Contact18 = ({ className, onSubmit }: Contact18Props) => {
   return (
     <section className={cn("py-8 lg:w-full px-6", className)}>
       <div className="container mx-auto">
-        <div className="mt-20 flex max-h-120 flex-col justify-between gap-15 md:gap-10 lg:flex-row">
+        <div className="mt-20 flex flex-col justify-between gap-15 md:gap-10 lg:flex-row">
           <div className="flex w-full max-w-lg lg:max-w-full flex-col justify-between gap-15">
             <div className="relative w-fit">
               <h1 className="text-6xl font-semibold tracking-tight lg:text-7xl text-primary">

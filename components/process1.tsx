@@ -43,7 +43,7 @@ const Process1 = ({ className }: Process1Props) => {
           <div className="top-10 col-span-2 h-fit w-fit gap-3 space-y-7 py-8 lg:sticky lg:top-24 lg:pl-6">
             <div className="relative w-fit text-5xl font-semibold tracking-tight lg:text-7xl ">
               {" "}
-              <h1 className="w-fit"><span className="text-7xl italic text-primary">H</span>ow It Works</h1>
+              <h1 className="w-fit"><span className="italic text-primary">H</span>ow It Works</h1>
               <Asterisk className="absolute -top-2 -right-2 size-5 text-primary md:size-10 lg:-right-14" />
             </div>
             <p className="text-base text-foreground/50">

@@ -65,41 +65,41 @@ const NAVIGATION: MenuItem[] = [
     links: [
       {
         label: "Commercial",
-        url: "#",
+        url: "/portfolio/commercial",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
       },
       {
         label: "Residential",
-        url: "#",
+        url: "/portfolio/residential",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg",
       },
       {
         label: "Boys Room",
-        url: "#",
+        url: "/portfolio/boys-room",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg",
       },
       {
         label: "Girls Room",
-        url: "#",
+        url: "/portfolio/girls-room",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-4.svg",
       },
       {
         label: "Creche",
-        url: "#",
+        url: "/portfolio/creche",
         image:
           "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-5.svg",
       },
       {
         label: "Play Area",
-        url: "#",
+        url: "/portfolio/play-area",
       },
       {
         label: "Hand Painted Furniture",
-        url: "#",
+        url: "/portfolio/hand-painted-furniture",
       },
     ],
   },
@@ -133,13 +133,13 @@ const MOBILE_NAVIGATION: MenuItem[] = [
     title: "Portfolio",
     className: "col-span-2",
     links: [
-      { label: "Commercial", url: "#" },
-      { label: "Residential", url: "#" },
-      { label: "Boys Room", url: "#" },
-      { label: "Girls Room", url: "#" },
-      { label: "Creche", url: "#" },
-      { label: "Play Area", url: "#" },
-      { label: "Hand Painted Furniture", url: "#" },
+      { label: "Commercial", url: "/portfolio/commercial" },
+      { label: "Residential", url: "/portfolio/residential" },
+      { label: "Boys Room", url: "/portfolio/boys-room" },
+      { label: "Girls Room", url: "/portfolio/girls-room" },
+      { label: "Creche", url: "/portfolio/creche" },
+      { label: "Play Area", url: "/portfolio/play-area" },
+      { label: "Hand Painted Furniture", url: "/portfolio/hand-painted-furniture" },
     ],
   },
 ];
@@ -225,7 +225,7 @@ const Navbar8 = ({ className }: Navbar8Props) => {
   return (
     <section className={cn("", className)}>
       <div
-        className="fixed top-0 z-500 w-full bg-transparent transition-colors duration-200 px-6"
+        className="fixed top-0 z-40 w-full bg-transparent transition-colors duration-200 px-6"
         ref={navRef}
       >
         <div className="container mx-auto border-b">
@@ -384,7 +384,7 @@ const MobileNavigationMenu = ({ open, setOpen }: MobileNavigationMenuProps) => {
                 Mobile Navigation
               </SheetTitle>
             </div>
-            <div className="flex justify-end pt-5">
+            <div className="flex justify-end pt-5 pr-4">
               <SheetClose asChild>
                 <Button
                   size="icon"
@@ -394,17 +394,17 @@ const MobileNavigationMenu = ({ open, setOpen }: MobileNavigationMenuProps) => {
                 </Button>
               </SheetClose>
             </div>
-            <div className="flex h-full flex-col justify-between gap-30 pt-24">
-              <div className="grid w-full grid-cols-2 gap-x-4 gap-y-10">
+            <div className="flex h-full flex-col justify-between gap-30 pt-6">
+              <div className="grid w-full grid-cols-2 gap-x-4 gap-y-10 pl-4">
                 {MOBILE_NAVIGATION.map((item, index) =>
                   renderMobileMenuItem(item, index),
                 )}
               </div>
-              <div className="col-span-2 flex flex-col gap-4">
-                <div className="text-xs text-foreground/60 uppercase">
+              <div className="col-span-2 flex flex-col gap-4 pl-4">
+                <div className="text-xl uppercase text-card border-b-2 w-fit border-secondary text-card">
                   SOCIAL
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 ">
                   {SOCIAL_LINKS.map((link, index) => (
                     <a
                       key={`social-link-${index}`}
@@ -453,7 +453,7 @@ const renderMobileMenuItem = (item: MenuItem, index: number) => {
       className={`flex flex-col gap-4 text-primary-foreground ${item.className}`}
       key={`mobile-menu-item-${index}`}
     >
-      <div className="text-xs text-foreground/60 uppercase">{item.title}</div>
+      <div className="text-xl text-card uppercase border-b-2 w-fit border-secondary pb-2">{item.title}</div>
       <ul className="flex flex-col gap-3">
         {item.links?.map((link, i) => (
           <li key={`mobile-nav-link-${i}`}>
