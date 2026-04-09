@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useEffect, useCallback, useRef } from "react"
-import Image from "next/image"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
+import { ImageWithSkeleton } from "@/components/image-with-skeleton"
 
 export interface GalleryImage {
   src: string
@@ -119,7 +119,7 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
             onClick={() => openLightbox(index)}
             className="group relative aspect-[4/3] overflow-hidden rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-100"
           >
-            <Image
+            <ImageWithSkeleton
               src={image.src}
               alt={image.alt}
               fill

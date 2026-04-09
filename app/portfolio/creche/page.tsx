@@ -91,7 +91,7 @@ const images: GalleryImage[] = [
 
 export default function CrechePage() {
   return (
-    <div className="flex flex-col flex-1 items-center font-sans">
+    <div className="flex flex-col flex-1 items-center font-sans py-8">
       <main className="flex flex-1 w-full max-w-6xl flex-col py-16 px-4 lg:px-16">
         <header className="mb-10">
           <h1 className="text-3xl font-semibold text-stone-800 mb-3">Creche</h1>

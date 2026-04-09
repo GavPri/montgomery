@@ -45,10 +45,10 @@ interface DesktopMenuItemProps {
 }
 
 const LOGO = {
-  url: "https://www.shadcnblocks.com",
-  src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-1.svg",
-  alt: "logo",
-  title: "Shadcnblocks.com",
+  url: "/",
+  src: "/images/eye_ball.jpg",
+  alt: "Stuart Montgomery",
+  title: "Stuart Montgomery",
 };
 
 const NAVIGATION: MenuItem[] = [
@@ -66,40 +66,37 @@ const NAVIGATION: MenuItem[] = [
       {
         label: "Commercial",
         url: "/portfolio/commercial",
-        image:
-          "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+        image: "/images/portfolio/commercial/StuartPaintings/commercial02.jpg",
       },
       {
         label: "Residential",
         url: "/portfolio/residential",
-        image:
-          "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg",
+        image: "/images/portfolio/residential/Living room.jpg",
       },
       {
         label: "Boys Room",
         url: "/portfolio/boys-room",
-        image:
-          "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg",
+        image: "/images/portfolio/boys-room/space room copy.jpg",
       },
       {
         label: "Girls Room",
         url: "/portfolio/girls-room",
-        image:
-          "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-4.svg",
+        image: "/images/portfolio/girls room/faeries - Copy.jpg",
       },
       {
         label: "Creche",
         url: "/portfolio/creche",
-        image:
-          "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-5.svg",
+        image: "/images/portfolio/creche/underwater.jpg",
       },
       {
         label: "Play Area",
         url: "/portfolio/play-area",
+        image: "/images/portfolio/play-area/jungle.jpg",
       },
       {
         label: "Hand Painted Furniture",
         url: "/portfolio/hand-painted-furniture",
+        image: "/images/portfolio/hand-painted-furniture/Hand painted piano.jpg",
       },
     ],
   },
@@ -237,7 +234,7 @@ const Navbar8 = ({ className }: Navbar8Props) => {
               <img
                 src={LOGO.src}
                 alt={LOGO.alt}
-                className="inline-block size-8"
+                className="inline-block size-8 rounded-full object-cover"
               />
               <span className="hidden md:inline-block">{LOGO.title}</span>
             </a>

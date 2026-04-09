@@ -10,8 +10,8 @@ interface Testimonial13Props {
 
 const Testimonial13 = ({ className }: Testimonial13Props) => {
   return (
-    <section className={cn("bg-secondary px-4 border-border border-2 rounded-md shawdow-md py-8 lg:py-32 lg:w-10/12", className)}>
-      <h2 className="text-6xl font-bold mb-6"><span className="italic text-primary text-7xl">T</span>estimonials</h2>
+    <section className={cn("bg-secondary px-4 border-border border-2 rounded-md shadow-md py-8 lg:py-32 w-full lg:w-10/12 my-6", className)}>
+      <h2 className=" text-3xl lg:text-6xl font-bold mb-6"><span className="italic text-primary  text-5xl lg:text-7xl">T</span>estimonials</h2>
       <div className="container">
         <div className="flex flex-col items-start text-left">
           <div className="mb-8 flex items-center rounded-full bg-secondary p-1 shadow-md">

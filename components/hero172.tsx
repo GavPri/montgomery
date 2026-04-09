@@ -60,8 +60,8 @@ const Hero172 = ({ className }: Hero172Props) => {
                   className="overflow-hidden"
                 >
                   <Image
-                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
-                    alt=""
+                    src="/images/portfolio/residential/Living room.jpg"
+                    alt="Hand-painted living room mural"
                     fill
                     className="object-cover"
                     priority
@@ -75,8 +75,8 @@ const Hero172 = ({ className }: Hero172Props) => {
                   className="overflow-hidden"
                 >
                   <Image
-                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-2.svg"
-                    alt=""
+                    src="/images/portfolio/creche/underwater.jpg"
+                    alt="Underwater themed creche mural"
                     fill
                     className="object-cover"
                     priority
@@ -90,8 +90,8 @@ const Hero172 = ({ className }: Hero172Props) => {
                   className="overflow-hidden"
                 >
                   <Image
-                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-3.svg"
-                    alt=""
+                    src="/images/portfolio/boys-room/space room copy.jpg"
+                    alt="Hand-painted space themed boys room mural"
                     fill
                     className="object-cover"
                     priority

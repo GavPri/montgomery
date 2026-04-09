@@ -28,7 +28,7 @@ interface Footer2Props {
 
 const Footer2 = ({
   logo = {
-    src: "/images/logo.svg",
+    src: "/images/eye_ball.jpg",
     alt: "Stuart Montgomery",
     title: "Stuart Montgomery",
     url: "/",
@@ -49,13 +49,13 @@ const Footer2 = ({
     {
       title: "Portfolio",
       links: [
-        { text: "Commercial", url: "#" },
-        { text: "Residential", url: "#" },
-        { text: "Boys Room", url: "#" },
-        { text: "Girls Room", url: "#" },
-        { text: "Creche", url: "#" },
-        { text: "Play Area", url: "#" },
-        { text: "Hand Painted Furniture", url: "#" },
+        { text: "Commercial", url: "/portfolio/commercial" },
+        { text: "Residential", url: "/portfolio/residential" },
+        { text: "Boys Room", url: "/portfolio/boys-room" },
+        { text: "Girls Room", url: "/portfolio/girls-room" },
+        { text: "Creche", url: "/portfolio/creche" },
+        { text: "Play Area", url: "/portfolio/play-area" },
+        { text: "Hand Painted Furniture", url: "/portfolio/hand-painted-furniture" },
       ],
     },
     {
@@ -70,7 +70,7 @@ const Footer2 = ({
   bottomLinks = [] as { text: string; url: string }[],
 }: Footer2Props) => {
   return (
-    <section className={cn("py-32", className)}>
+    <section className={cn("py-8 px-4 bg-card", className)}>
       <div className="container mx-auto">
         <footer>
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
@@ -81,7 +81,7 @@ const Footer2 = ({
                     src={logo.src}
                     alt={logo.alt}
                     title={logo.title}
-                    className="h-10 dark:invert"
+                    className="h-10 rounded-full object-cover"
                   />
                   <LogoText className="text-xl">{logo.title}</LogoText>
                 </Logo>

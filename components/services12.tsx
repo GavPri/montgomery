@@ -14,33 +14,38 @@ type ServiceProps = {
 const services: ServiceProps[] = [
   {
     title: "Commercial",
-    image:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-6jEVl7xPH3E-unsplash.jpg",
+    image: "/images/portfolio/commercial/StuartPaintings/commercial02.jpg",
     url: "/portfolio/commercial",
   },
   {
     title: "Residential",
-    image:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-gDmVqxZt1hg-unsplash.jpg",
+    image: "/images/portfolio/residential/Living room.jpg",
     url: "/portfolio/residential",
   },
   {
     title: "Boys Room",
-    image:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-9__Q24sJqKg-unsplash.jpg",
+    image: "/images/portfolio/boys-room/space room copy.jpg",
     url: "/portfolio/boys-room",
   },
   {
     title: "Girls Room",
-    image:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-duxeKbu9FDE-unsplash.jpg",
+    image: "/images/portfolio/girls room/faeries - Copy.jpg",
     url: "/portfolio/girls-room",
   },
   {
     title: "Creche",
-    image:
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/photos/simone-hutsch-5oYbG-sEImY-unsplash.jpg",
+    image: "/images/portfolio/creche/underwater.jpg",
     url: "/portfolio/creche",
+  },
+  {
+    title: "Play Area",
+    image: "/images/portfolio/play-area/jungle.jpg",
+    url: "/portfolio/play-area",
+  },
+  {
+    title: "Hand Painted Furniture",
+    image: "/images/portfolio/hand-painted-furniture/Hand painted piano.jpg",
+    url: "/portfolio/hand-painted-furniture",
   },
 ];
 
@@ -86,18 +91,19 @@ const Services12 = ({ className }: Services12Props) => {
                   className="object-cover"
                   loading="lazy"
                 />
+                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/70 to-transparent" />
                 <CardContent className="absolute inset-0 flex flex-col justify-start p-6">
-                  <div className="pr-4 font-semibold text-white">
+                  <div className="pr-4 font-semibold text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.8)]">
                     {service.title}
                   </div>
                 </CardContent>
-                <ArrowUpRight className="absolute top-6 right-6 h-6 w-6 text-white transition-transform group-hover:scale-110" />
+                <ArrowUpRight className="absolute top-6 right-6 h-6 w-6 text-white drop-shadow-md transition-transform group-hover:scale-110" />
               </Card>
             </a>
           ))}
 
-          {/* Secondary Services - Remaining 3 */}
-          <div className="col-span-full grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {/* Secondary Services - Remaining 5 */}
+          <div className="col-span-full grid grid-cols-2 gap-4 sm:grid-cols-5">
             {services.slice(2).map((service, idx) => (
               <a
                 key={idx + 2}
@@ -112,12 +118,13 @@ const Services12 = ({ className }: Services12Props) => {
                     className="object-cover"
                     loading="lazy"
                   />
+                  <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/70 to-transparent" />
                   <CardContent className="absolute inset-0 flex flex-col justify-start p-4">
-                    <div className="pr-4 text-sm font-semibold text-white">
+                    <div className="pr-4 text-sm font-semibold text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.8)]">
                       {service.title}
                     </div>
                   </CardContent>
-                  <ArrowUpRight className="absolute top-4 right-4 h-5 w-5 text-white transition-transform group-hover:scale-110" />
+                  <ArrowUpRight className="absolute top-4 right-4 h-5 w-5 text-white drop-shadow-md transition-transform group-hover:scale-110" />
                 </Card>
               </a>
             ))}
