@@ -63,9 +63,9 @@ const images: GalleryImage[] = [
   },
   {
     src: "/images/portfolio/hand-painted-furniture/Hand painted piano.jpg",
-    alt: "Hand painted piano",
+    alt: "White upright piano hand-painted with colourful musical notes",
     title: "Hand Painted Piano",
-    caption: "A one-of-a-kind hand-painted piano",
+    caption: "A white upright piano decorated with hand-painted colourful musical notes",
   },
   {
     src: "/images/portfolio/hand-painted-furniture/Hand painted stuff. Mural 005.jpg",

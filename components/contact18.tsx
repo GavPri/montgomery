@@ -93,7 +93,7 @@ const Contact18 = ({ className, onSubmit }: Contact18Props) => {
               {supportFeatures.map((feature, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-8 text-base text-foreground/50"
+                  className="flex items-center gap-8 text-base text-foreground"
                 >
                   <div className="flex size-6 items-center justify-center bg-foreground text-background rounded-full">
                     <Check className="size-5 " />

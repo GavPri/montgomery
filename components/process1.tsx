@@ -46,7 +46,7 @@ const Process1 = ({ className }: Process1Props) => {
               <h1 className="w-fit"><span className="italic text-primary">H</span>ow It Works</h1>
               <Asterisk className="absolute -top-2 -right-2 size-5 text-primary md:size-10 lg:-right-14" />
             </div>
-            <p className="text-base text-foreground/50">
+            <p className="text-base text-foreground">
               Commissioning a mural or painted finish is a straightforward,
               enjoyable process. Here's what to expect from first contact to
               finished piece.
@@ -75,10 +75,10 @@ const Process1 = ({ className }: Process1Props) => {
                   0{index + 1}
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-4 text-2xl font-semibold tracking-tighter lg:text-3xl">
+                  <p className="mb-4 text-2xl font-semibold tracking-tighter lg:text-3xl">
                     {step.title}
-                  </h3>
-                  <p className="text-foreground/50">{step.description}</p>
+                  </p>
+                  <p className="text-foreground">{step.description}</p>
                 </div>
               </li>
             ))}

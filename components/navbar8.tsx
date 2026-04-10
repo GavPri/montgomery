@@ -260,7 +260,7 @@ const Navbar8 = ({ className }: Navbar8Props) => {
                 </Button>
               ))}
               <div className="lg:hidden">
-                <Button variant="ghost" size="icon" onClick={handleMobileMenu}>
+                <Button variant="ghost" size="icon" onClick={handleMobileMenu} aria-label="Open navigation menu" aria-expanded={open} aria-controls="mobile-nav">
                   <Menu className="size-5.5" />
                 </Button>
               </div>
@@ -385,6 +385,7 @@ const MobileNavigationMenu = ({ open, setOpen }: MobileNavigationMenuProps) => {
               <SheetClose asChild>
                 <Button
                   size="icon"
+                  aria-label="Close navigation menu"
                   className="size-9 rounded-full bg-muted/20 hover:bg-muted/20"
                 >
                   <X className="size-5.5" />
