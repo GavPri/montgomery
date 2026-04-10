@@ -35,6 +35,7 @@ const Cta6 = ({ className }: Cta6Props) => {
                 src="/images/eye_ball.jpg"
                 alt="Stuart Montgomery"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 75vw, 50vw"
                 className="object-cover"
                 loading="lazy"
               />

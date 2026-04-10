@@ -88,6 +88,7 @@ const Services12 = ({ className }: Services12Props) => {
                   src={service.image}
                   alt={service.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                   loading="lazy"
                 />
@@ -115,6 +116,7 @@ const Services12 = ({ className }: Services12Props) => {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 640px) 50vw, 20vw"
                     className="object-cover"
                     loading="lazy"
                   />

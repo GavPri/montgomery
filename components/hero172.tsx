@@ -63,6 +63,7 @@ const Hero172 = ({ className }: Hero172Props) => {
                     src="/images/portfolio/residential/Living room.jpg"
                     alt="Hand-painted living room mural"
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                     priority
                   />
@@ -78,6 +79,7 @@ const Hero172 = ({ className }: Hero172Props) => {
                     src="/images/portfolio/creche/underwater.jpg"
                     alt="Underwater themed creche mural"
                     fill
+                    sizes="(max-width: 768px) 100vw, 42vw"
                     className="object-cover"
                     priority
                   />
@@ -93,6 +95,7 @@ const Hero172 = ({ className }: Hero172Props) => {
                     src="/images/portfolio/boys-room/space room copy.jpg"
                     alt="Hand-painted space themed boys room mural"
                     fill
+                    sizes="(max-width: 768px) 100vw, 42vw"
                     className="object-cover"
                     priority
                   />
