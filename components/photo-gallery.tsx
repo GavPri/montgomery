@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 import { ImageWithSkeleton } from "@/components/image-with-skeleton"
 
 export interface GalleryImage {
