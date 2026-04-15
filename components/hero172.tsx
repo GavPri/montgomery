@@ -32,7 +32,7 @@ const Hero172 = ({ className }: Hero172Props) => {
                   <a href="/portfolio">View Portfolio</a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="rounded-lg px-8 py-5 font-semibold">
-                  <a href="/contact">Get a Quote</a>
+                  <a href="/contact">Get in Touch</a>
                 </Button>
               </div>
 

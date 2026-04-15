@@ -15,7 +15,7 @@ export function PortfolioCTA() {
           href="/contact"
           className="inline-block rounded-full bg-accent px-8 py-3 font-semibold text-card transition-opacity hover:opacity-90"
         >
-          Get a Quote
+          Get in Touch
         </Link>
         <Link
           href="/portfolio"
