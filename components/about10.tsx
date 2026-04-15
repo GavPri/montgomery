@@ -18,13 +18,13 @@ const profile = {
   outro:
     "Stuart is based in County Meath and continues to work throughout Ireland and abroad, producing murals and artwork for loyal clients and new customers alike. You can reach him by email at info@stuartmontgomery.com or by phone on +353 87 2900736. For information on commissioning a mural or painting, see the FAQs page.",
   team: [
-    { id: "01", item: "Commercial", type: "Offices, restaurants & retail", href: "#" },
-    { id: "02", item: "Residential", type: "Homes & living spaces", href: "#" },
-    { id: "03", item: "Boys Room", type: "Adventure & imagination", href: "#" },
-    { id: "04", item: "Girls Room", type: "Whimsical & dreamy", href: "#" },
-    { id: "05", item: "Creche", type: "Nurseries & early learning", href: "#" },
-    { id: "06", item: "Play Area", type: "Indoor & outdoor play spaces", href: "#" },
-    { id: "07", item: "Hand Painted Furniture", type: "Bespoke painted pieces", href: "#" },
+    { id: "01", item: "Commercial", type: "Offices, restaurants & retail", href: "/portfolio/commercial" },
+    { id: "02", item: "Residential", type: "Homes & living spaces", href: "/portfolio/residential" },
+    { id: "03", item: "Boys Room", type: "Adventure & imagination", href: "/portfolio/boys-room" },
+    { id: "04", item: "Girls Room", type: "Whimsical & dreamy", href: "/portfolio/girls-room" },
+    { id: "05", item: "Creche", type: "Nurseries & early learning", href: "/portfolio/creche" },
+    { id: "06", item: "Play Area", type: "Indoor & outdoor play spaces", href: "/portfolio/play-area" },
+    { id: "07", item: "Hand Painted Furniture", type: "Bespoke painted pieces", href: "/portfolio/hand-painted-furniture" },
   ],
 };
 
