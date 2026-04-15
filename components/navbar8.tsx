@@ -159,21 +159,6 @@ const NAV_BUTTONS: {
   },
 ];
 
-const SOCIAL_LINKS = [
-  {
-    label: "Linkedin",
-    url: "#",
-  },
-  {
-    label: "Twitter",
-    url: "#",
-  },
-  {
-    label: "Facebook",
-    url: "#",
-  },
-];
-
 const MOBILE_BREAKPOINT = 1024;
 
 interface Navbar8Props {
@@ -397,22 +382,6 @@ const MobileNavigationMenu = ({ open, setOpen }: MobileNavigationMenuProps) => {
                 {MOBILE_NAVIGATION.map((item, index) =>
                   renderMobileMenuItem(item, index),
                 )}
-              </div>
-              <div className="col-span-2 flex flex-col gap-4 pl-4">
-                <div className="text-xl uppercase text-card border-b-2 w-fit border-secondary text-card">
-                  SOCIAL
-                </div>
-                <div className="flex gap-4 ">
-                  {SOCIAL_LINKS.map((link, index) => (
-                    <a
-                      key={`social-link-${index}`}
-                      href={link.url}
-                      className="text-primary-foreground"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
