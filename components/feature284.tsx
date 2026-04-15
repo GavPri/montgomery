@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
 
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { cn } from "@/lib/utils";
@@ -14,6 +14,7 @@ const featureData = [
     title: "Commercial",
     badgeTitle: "Portfolio",
     gridClass: "md:col-span-1",
+    href: "/portfolio/commercial",
   },
   {
     desc: "Bringing warmth and character to homes with hand-crafted murals tailored to your personal style.",
@@ -21,6 +22,7 @@ const featureData = [
     title: "Residential",
     badgeTitle: "Portfolio",
     gridClass: "lg:col-span-2",
+    href: "/portfolio/residential",
   },
   {
     desc: "Adventurous murals designed to spark imagination and excitement in every boys bedroom.",
@@ -28,6 +30,7 @@ const featureData = [
     title: "Boys Room",
     badgeTitle: "Portfolio",
     gridClass: "md:col-span-1 lg:row-span-2",
+    href: "/portfolio/boys-room",
   },
   {
     desc: "Dreamy, whimsical designs that create a magical world for girls to grow and play in.",
@@ -35,6 +38,7 @@ const featureData = [
     title: "Girls Room",
     badgeTitle: "Portfolio",
     gridClass: "lg:col-span-2",
+    href: "/portfolio/girls-room",
   },
   {
     desc: "Bright, stimulating murals crafted to inspire curiosity and joy in creche and nursery environments.",
@@ -42,6 +46,7 @@ const featureData = [
     title: "Creche",
     badgeTitle: "Portfolio",
     gridClass: "md:col-span-1",
+    href: "/portfolio/creche",
   },
   {
     desc: "Vibrant, playful scenes that transform outdoor and indoor play areas into imaginative adventures.",
@@ -49,6 +54,7 @@ const featureData = [
     title: "Play Area",
     badgeTitle: "Portfolio",
     gridClass: "md:col-span-1",
+    href: "/portfolio/play-area",
   },
   {
     desc: "One-of-a-kind hand-painted furniture pieces that add a unique, artistic touch to any room.",
@@ -56,6 +62,7 @@ const featureData = [
     title: "Hand Painted Furniture",
     badgeTitle: "Portfolio",
     gridClass: "lg:col-span-3",
+    href: "/portfolio/hand-painted-furniture",
   },
 ];
 
@@ -71,8 +78,9 @@ const Feature284 = ({ className }: Feature284Props) => {
       <div className="container flex h-full w-full items-center justify-center">
         <div className="grid w-full max-w-7xl auto-rows-[420px] grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {featureData.map((feature, index) => (
-            <div
+            <Link
               key={index}
+              href={feature.href}
               className={cn(
                 "group relative flex flex-col gap-2 rounded-3xl border p-4 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl",
                 feature.gridClass,
@@ -113,7 +121,7 @@ const Feature284 = ({ className }: Feature284Props) => {
                 {feature.title}
               </h3>
               <p className="text-background font-bold text-sm leading-snug line-clamp-2">{feature.desc}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

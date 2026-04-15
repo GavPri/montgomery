@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { PhotoGallery, type GalleryImage } from "@/components/photo-gallery";
+import { PortfolioBreadcrumb } from "@/components/portfolio-breadcrumb";
+import { PortfolioCTA } from "@/components/portfolio-cta";
 
 export const metadata: Metadata = {
   title: "Boys Room Murals — Stuart Montgomery",
@@ -38,12 +40,6 @@ const images: GalleryImage[] = [
     alt: "Thunderbirds mural by Stuart Montgomery",
     title: "Thunderbirds",
     caption: "Hand-painted Thunderbirds mural for a boys room",
-  },
-  {
-    src: "/images/portfolio/boys-room/Fireman Sam 013.jpg",
-    alt: "Fireman Sam mural by Stuart Montgomery",
-    title: "Fireman Sam",
-    caption: "Hand-painted Fireman Sam mural for a boys room",
   },
   {
     src: "/images/portfolio/boys-room/portholes.jpg",
@@ -85,8 +81,9 @@ const images: GalleryImage[] = [
 
 export default function BoysRoomPage() {
   return (
-    <div className="flex flex-col flex-1 items-center font-sans">
+    <div className="flex flex-col flex-1 items-center font-sans pt-8">
       <main className="flex flex-1 w-full max-w-6xl flex-col py-16 px-4 lg:px-16">
+        <PortfolioBreadcrumb page="Boys Room" />
         <header className="mb-10">
           <h1 className="text-3xl font-semibold text-stone-800 mb-3">Boys Room</h1>
           <p className="text-stone-500 max-w-2xl">
@@ -95,6 +92,7 @@ export default function BoysRoomPage() {
           </p>
         </header>
         <PhotoGallery images={images} />
+        <PortfolioCTA />
       </main>
     </div>
   );

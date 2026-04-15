@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { PhotoGallery, type GalleryImage } from "@/components/photo-gallery";
+import { PortfolioBreadcrumb } from "@/components/portfolio-breadcrumb";
+import { PortfolioCTA } from "@/components/portfolio-cta";
 
 export const metadata: Metadata = {
   title: "Residential Murals — Stuart Montgomery",
@@ -93,6 +95,7 @@ export default function ResidentialPage() {
   return (
     <div className="flex flex-col flex-1 items-center font-sans pt-8">
       <main className="flex flex-1 w-full max-w-6xl flex-col py-16 px-4 lg:px-16">
+        <PortfolioBreadcrumb page="Residential" />
         <header className="mb-10">
           <h1 className="text-3xl font-semibold text-stone-800 mb-3">Residential</h1>
           <p className="text-stone-500 max-w-2xl">
@@ -101,6 +104,7 @@ export default function ResidentialPage() {
           </p>
         </header>
         <PhotoGallery images={images} />
+        <PortfolioCTA />
       </main>
     </div>
   );
